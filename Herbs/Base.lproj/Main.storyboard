@@ -23,19 +23,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-PS-hv6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-PS-hv6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Herbs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-gN-dFO">
                                 <rect key="frame" x="0.0" y="28" width="375" height="34.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="                               ........ Loading....   " translatesAutoresizingMaskIntoConstraints="NO" id="WCN-nm-oZV">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" editable="NO" text="                               ........ Loading....   " translatesAutoresizingMaskIntoConstraints="NO" id="WCN-nm-oZV">
                                 <rect key="frame" x="0.0" y="62.5" width="375" height="272"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -99,9 +100,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MJq-Q3-x8X" secondAttribute="trailing" id="GON-6X-3Qb"/>
                             <constraint firstItem="WCN-nm-oZV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Htb-86-SFT"/>
                             <constraint firstItem="kVA-PS-hv6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="JGT-wc-qbW"/>
+                            <constraint firstItem="ej5-GX-JTA" firstAttribute="top" secondItem="kVA-PS-hv6" secondAttribute="bottom" id="NkA-On-mfy"/>
                             <constraint firstItem="ry3-gN-dFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="PWE-gI-sHJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ej5-GX-JTA" secondAttribute="trailing" constant="-16" id="YLR-37-95E"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kVA-PS-hv6" secondAttribute="bottom" id="aEx-cZ-Jp5"/>
                             <constraint firstItem="ry3-gN-dFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egj-4C-oab"/>
                             <constraint firstAttribute="trailing" secondItem="kVA-PS-hv6" secondAttribute="trailing" id="fMQ-R2-Zpf"/>
                             <constraint firstItem="WCN-nm-oZV" firstAttribute="top" secondItem="ry3-gN-dFO" secondAttribute="bottom" constant="0.5" id="g09-iE-cT1"/>

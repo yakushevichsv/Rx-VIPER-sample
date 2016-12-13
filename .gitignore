@@ -32,5 +32,4 @@ timeline.xctimeline
 playground.xcworkspace
 
 .build/
-Pods/
-Podsfile.lock
+.Pods/

@@ -38,13 +38,13 @@ final class ImageAccessor {
             name = "basil"
             break
         case 2:
-            name =  "anise"//"marjorana"
+            name =  "marjorana"
             break
         case 3:
-            name = "anise" //"rosemary"
+            name = "rosemary"
             break
         default:
-            name = "basil"// "saffron"
+            name = "saffron"
             break
         }
         assert(!name.isEmpty)
