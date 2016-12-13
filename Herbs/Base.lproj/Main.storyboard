@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Herbs Gallery View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HerbsGalleryViewController" customModule="Herbs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-PS-hv6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Herbs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-gN-dFO">
+                                <rect key="frame" x="0.0" y="28" width="375" height="34.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="                               ........ Loading....   " translatesAutoresizingMaskIntoConstraints="NO" id="WCN-nm-oZV">
+                                <rect key="frame" x="0.0" y="62.5" width="375" height="272"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-GX-JTA">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ICD-Ji-7Da">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7MI-dc-xeW" customClass="CollectionViewCell" customModule="Herbs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIB-80-BfJ">
+                                                    <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="yIB-80-BfJ" firstAttribute="leading" secondItem="7MI-dc-xeW" secondAttribute="leadingMargin" id="Olq-yb-kwR"/>
+                                            <constraint firstItem="yIB-80-BfJ" firstAttribute="top" secondItem="7MI-dc-xeW" secondAttribute="topMargin" id="gFT-pZ-jYG"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="yIB-80-BfJ" secondAttribute="trailing" id="j6x-Az-63i"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="yIB-80-BfJ" secondAttribute="bottom" id="neV-HF-zFw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ivHerb" destination="yIB-80-BfJ" id="pDd-o0-38g"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJq-Q3-x8X">
+                                <rect key="frame" x="337" y="292.5" width="22" height="22"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="displayHerbDetails" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4w-zQ-wBO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ry3-gN-dFO" secondAttribute="trailing" id="4iY-6C-ZQ9"/>
+                            <constraint firstItem="ry3-gN-dFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5jJ-5p-wXE"/>
+                            <constraint firstItem="WCN-nm-oZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Djw-vd-Xby"/>
+                            <constraint firstItem="WCN-nm-oZV" firstAttribute="bottom" secondItem="MJq-Q3-x8X" secondAttribute="bottom" constant="20" id="DuY-9z-TMK"/>
+                            <constraint firstAttribute="trailing" secondItem="WCN-nm-oZV" secondAttribute="trailing" id="ET1-nG-LIL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MJq-Q3-x8X" secondAttribute="trailing" id="GON-6X-3Qb"/>
+                            <constraint firstItem="WCN-nm-oZV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Htb-86-SFT"/>
+                            <constraint firstItem="kVA-PS-hv6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="JGT-wc-qbW"/>
+                            <constraint firstItem="ry3-gN-dFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="PWE-gI-sHJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ej5-GX-JTA" secondAttribute="trailing" constant="-16" id="YLR-37-95E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kVA-PS-hv6" secondAttribute="bottom" id="aEx-cZ-Jp5"/>
+                            <constraint firstItem="ry3-gN-dFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egj-4C-oab"/>
+                            <constraint firstAttribute="trailing" secondItem="kVA-PS-hv6" secondAttribute="trailing" id="fMQ-R2-Zpf"/>
+                            <constraint firstItem="WCN-nm-oZV" firstAttribute="top" secondItem="ry3-gN-dFO" secondAttribute="bottom" constant="0.5" id="g09-iE-cT1"/>
+                            <constraint firstItem="ej5-GX-JTA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="ojs-pF-bYP"/>
+                            <constraint firstItem="kVA-PS-hv6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sFj-lS-P1I"/>
+                            <constraint firstItem="ej5-GX-JTA" firstAttribute="top" secondItem="WCN-nm-oZV" secondAttribute="bottom" constant="-1" id="t06-50-Uvt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ej5-GX-JTA" secondAttribute="bottom" id="vxP-w4-abL"/>
+                            <constraint firstItem="ej5-GX-JTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="wUh-tO-FXV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnHerbDetails" destination="MJq-Q3-x8X" id="5iz-xL-BKM"/>
+                        <outlet property="cvHerbs" destination="ej5-GX-JTA" id="MBz-MW-DHY"/>
+                        <outlet property="herbDescription" destination="WCN-nm-oZV" id="1IN-mF-W1Z"/>
+                        <outlet property="herbImage" destination="kVA-PS-hv6" id="Vcv-Gu-pYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
