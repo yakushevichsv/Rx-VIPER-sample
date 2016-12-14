@@ -67,8 +67,16 @@ final class HerbsGalleryViewController: UIViewController {
         }).addDisposableTo(disposeBag)
     }
     
-    @IBAction func displayHerbDetails() {
-        self.presenter.displayDetailedInfoForActiveItem()
+    @IBAction func displayHerbDetails(sender: UIButton) {
+        self.performSegue(withIdentifier: "herbDetailsSegueId", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "herbDetailsSegueId" else  {
+            super.prepare(for: segue, sender: sender)
+            return
+        }
+        presenter.prepareForDisplay(destination: segue.destination)
     }
 }
 

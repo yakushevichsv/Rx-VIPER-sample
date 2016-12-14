@@ -9,8 +9,10 @@
 import Foundation
 import Mapper
 
+//MARK: - HerbsAndHealthProblem
 struct HerbsAndHealthProblem {
-     let objectId: String
+    typealias ObjectIdType = String
+     let objectId: ObjectIdType
      let herbName: String
      let healthProblemName: String
      let herbId: Int
@@ -40,5 +42,11 @@ extension HerbsAndHealthProblem: Mappable {
         createdAt =  HerbsAndHealthProblem.formatter.date(from: try map.from("createdAt"))
         updatedAt = HerbsAndHealthProblem.formatter.date(from: try map.from("updatedAt"))
     }
+}
+
+//MARK: - HerbsAndHealthProblemWrapper
+struct HerbsAndHealthProblemWrapper {
+    let herb: HerbsAndHealthProblem
+    let data: Data
 }
 

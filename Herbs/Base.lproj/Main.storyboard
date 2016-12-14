@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,7 +86,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="displayHerbDetails" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4w-zQ-wBO"/>
+                                    <action selector="displayHerbDetailsWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVD-sT-7de"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,7 +102,7 @@
                             <constraint firstItem="kVA-PS-hv6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="JGT-wc-qbW"/>
                             <constraint firstItem="ej5-GX-JTA" firstAttribute="top" secondItem="kVA-PS-hv6" secondAttribute="bottom" id="NkA-On-mfy"/>
                             <constraint firstItem="ry3-gN-dFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="PWE-gI-sHJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ej5-GX-JTA" secondAttribute="trailing" constant="-16" id="YLR-37-95E"/>
+                            <constraint firstAttribute="trailing" secondItem="ej5-GX-JTA" secondAttribute="trailing" id="YLR-37-95E"/>
                             <constraint firstItem="ry3-gN-dFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egj-4C-oab"/>
                             <constraint firstAttribute="trailing" secondItem="kVA-PS-hv6" secondAttribute="trailing" id="fMQ-R2-Zpf"/>
                             <constraint firstItem="WCN-nm-oZV" firstAttribute="top" secondItem="ry3-gN-dFO" secondAttribute="bottom" constant="0.5" id="g09-iE-cT1"/>
@@ -110,7 +110,7 @@
                             <constraint firstItem="kVA-PS-hv6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sFj-lS-P1I"/>
                             <constraint firstItem="ej5-GX-JTA" firstAttribute="top" secondItem="WCN-nm-oZV" secondAttribute="bottom" constant="-1" id="t06-50-Uvt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ej5-GX-JTA" secondAttribute="bottom" id="vxP-w4-abL"/>
-                            <constraint firstItem="ej5-GX-JTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="wUh-tO-FXV"/>
+                            <constraint firstItem="ej5-GX-JTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wUh-tO-FXV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -118,11 +118,101 @@
                         <outlet property="cvHerbs" destination="ej5-GX-JTA" id="MBz-MW-DHY"/>
                         <outlet property="herbDescription" destination="WCN-nm-oZV" id="1IN-mF-W1Z"/>
                         <outlet property="herbImage" destination="kVA-PS-hv6" id="Vcv-Gu-pYS"/>
+                        <segue destination="ZwF-68-8f2" kind="presentation" identifier="herbDetailsSegueId" id="zKZ-O5-8aX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="38.23088455772114"/>
+            <point key="canvasLocation" x="-18" y="39"/>
+        </scene>
+        <!--Herb Details View Controller-->
+        <scene sceneID="2JQ-F0-O98">
+            <objects>
+                <viewController id="ZwF-68-8f2" customClass="HerbDetailsViewController" customModule="Herbs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="up2-5a-irR"/>
+                        <viewControllerLayoutGuide type="bottom" id="XMd-OT-HQ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tSZ-6e-SHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OlS-QV-Fij" userLabel="BG Image">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-dS-k3h" userLabel="HerbName">
+                                <rect key="frame" x="149" y="44" width="78" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="c2O-rV-sDM" userLabel="Created Time">
+                                <rect key="frame" x="16" y="637.5" width="171.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="             " textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hwS-e0-H9q" userLabel="Updated time">
+                                <rect key="frame" x="187.5" y="636.5" width="171.5" height="22.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="            " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-Yd-fPK" userLabel="DeseaseDesc">
+                                <rect key="frame" x="153.5" y="387" width="68.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="-1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alz-2X-5Ln">
+                                <rect key="frame" x="320" y="20" width="39" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeWithSender:" destination="ZwF-68-8f2" eventType="touchUpInside" id="Fkk-ax-Bsc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XMd-OT-HQ2" firstAttribute="top" secondItem="c2O-rV-sDM" secondAttribute="bottom" constant="8" id="2Fv-Cs-MJz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="c2O-rV-sDM" secondAttribute="leading" id="68b-Oq-Jhg"/>
+                            <constraint firstItem="5wU-dS-k3h" firstAttribute="centerX" secondItem="tSZ-6e-SHD" secondAttribute="centerX" id="HnT-eF-sJh"/>
+                            <constraint firstItem="pMm-Yd-fPK" firstAttribute="centerY" secondItem="tSZ-6e-SHD" secondAttribute="centerY" multiplier="1.2" id="Jm6-Ra-3d7"/>
+                            <constraint firstItem="alz-2X-5Ln" firstAttribute="top" secondItem="up2-5a-irR" secondAttribute="bottom" id="Lvl-7G-mFu"/>
+                            <constraint firstItem="XMd-OT-HQ2" firstAttribute="top" secondItem="hwS-e0-H9q" secondAttribute="bottom" constant="8" id="Nx3-dk-Bjs"/>
+                            <constraint firstItem="pMm-Yd-fPK" firstAttribute="centerX" secondItem="tSZ-6e-SHD" secondAttribute="centerX" id="PxK-vd-RzA"/>
+                            <constraint firstItem="5wU-dS-k3h" firstAttribute="top" secondItem="up2-5a-irR" secondAttribute="bottom" constant="24" id="REu-fc-VtM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hwS-e0-H9q" secondAttribute="trailing" id="TIr-B3-8xp"/>
+                            <constraint firstItem="OlS-QV-Fij" firstAttribute="leading" secondItem="tSZ-6e-SHD" secondAttribute="leading" id="WKg-P7-nZb"/>
+                            <constraint firstItem="XMd-OT-HQ2" firstAttribute="top" secondItem="OlS-QV-Fij" secondAttribute="bottom" id="aZr-BV-eNJ"/>
+                            <constraint firstItem="c2O-rV-sDM" firstAttribute="width" secondItem="hwS-e0-H9q" secondAttribute="width" id="hk1-bZ-x53"/>
+                            <constraint firstAttribute="trailing" secondItem="OlS-QV-Fij" secondAttribute="trailing" id="hwO-1F-hqg"/>
+                            <constraint firstItem="hwS-e0-H9q" firstAttribute="leading" secondItem="c2O-rV-sDM" secondAttribute="trailing" id="jpQ-d9-V5K"/>
+                            <constraint firstItem="up2-5a-irR" firstAttribute="bottom" secondItem="OlS-QV-Fij" secondAttribute="top" constant="20" id="oW2-ON-nca"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="alz-2X-5Ln" secondAttribute="trailing" id="zDG-w3-Peg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="herbImage" destination="OlS-QV-Fij" id="MfD-6q-CMd"/>
+                        <outlet property="lblCreatedTime" destination="c2O-rV-sDM" id="V6h-Nd-j9W"/>
+                        <outlet property="lblHerbDescription" destination="pMm-Yd-fPK" id="clG-qK-b8R"/>
+                        <outlet property="lblHerbName" destination="5wU-dS-k3h" id="eOc-IN-CPL"/>
+                        <outlet property="lblUpdatedTime" destination="hwS-e0-H9q" id="HbU-Vx-xFo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IzD-A6-IzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="39.130434782608695"/>
         </scene>
     </scenes>
 </document>

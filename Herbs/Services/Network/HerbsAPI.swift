@@ -12,7 +12,7 @@ import Moya
 
 enum HerbsAPI {
     case basicQuery
-    case retrieve(Int)
+    case retrieve(HerbsAndHealthProblem.ObjectIdType)
     
     static let endpointClosure = { (target: HerbsAPI) -> Endpoint<HerbsAPI> in
         let defaultEndpoint = MoyaProvider.defaultEndpointMapping(target)
@@ -33,7 +33,7 @@ extension HerbsAPI: TargetType {
     var path: String {
         switch self {
         case .retrieve(let objectID):
-            return "/\(objectID)"
+            return "/classes/HerbsAndHealthProblems/" + objectID.description
         case .basicQuery:
             return "/classes/HerbsAndHealthProblems/"
         }
@@ -52,8 +52,8 @@ extension HerbsAPI: TargetType {
         switch self {
         case .basicQuery:
             return "{\"results\":[{\"objectId\":\"6kMsIptcj1\",\"HerbName\":\"Betaine Anhydrous\",\"HealthProblemName\":\"depression\",\"HerbId\":130,\"createdAt\":\"2016-08-30T05:51:10.683Z\",\"updatedAt\":\"2016-08-30T05:51:10.683Z\"}]}".utf8Data
-        default:
-            return "{}".utf8Data
+        case .retrieve(let objectID):
+            return "{\"objectId\":\"\(objectID)\",\"HerbName\":\"Betaine Anhydrous\",\"HealthProblemName\":\"depression\",\"HerbId\":130,\"createdAt\":\"2016-08-30T05:51:10.683Z\",\"updatedAt\":\"2016-08-30T05:51:10.683Z\"}".utf8Data
         }
     }
     

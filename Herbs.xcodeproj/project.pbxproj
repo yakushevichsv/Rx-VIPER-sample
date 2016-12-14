@@ -13,17 +13,10 @@
 		212E587B1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */; };
 		212E587C1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */; };
 		212E587D1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */; };
-		215FCAAC1DFF54290076288C /* HerbsGalleryModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAB1DFF54290076288C /* HerbsGalleryModuleInterface.swift */; };
-		215FCAAD1DFF54290076288C /* HerbsGalleryModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAB1DFF54290076288C /* HerbsGalleryModuleInterface.swift */; };
-		215FCAAE1DFF54290076288C /* HerbsGalleryModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAB1DFF54290076288C /* HerbsGalleryModuleInterface.swift */; };
 		215FCAB01DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
 		215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
 		215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
-		215FCAB41DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAB31DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift */; };
-		215FCAB51DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAB31DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift */; };
-		215FCAB61DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAB31DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift */; };
 		21613D661DFEBEC900F4F046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21613D651DFEBEC900F4F046 /* AppDelegate.swift */; };
-		21613D681DFEBEC900F4F046 /* HerbsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21613D671DFEBEC900F4F046 /* HerbsGalleryViewController.swift */; };
 		21613D6B1DFEBEC900F4F046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21613D691DFEBEC900F4F046 /* Main.storyboard */; };
 		21613D6D1DFEBEC900F4F046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21613D6C1DFEBEC900F4F046 /* Assets.xcassets */; };
 		21613D701DFEBEC900F4F046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21613D6E1DFEBEC900F4F046 /* LaunchScreen.storyboard */; };
@@ -35,6 +28,16 @@
 		21613D9C1DFED00100F4F046 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21613D9B1DFED00100F4F046 /* Extensions.swift */; };
 		21613D9D1DFED00100F4F046 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21613D9B1DFED00100F4F046 /* Extensions.swift */; };
 		21613D9E1DFED00100F4F046 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21613D9B1DFED00100F4F046 /* Extensions.swift */; };
+		216735471E01A653005F5CBB /* HerbsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */; };
+		216735501E01A7D7005F5CBB /* HerbDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354B1E01A7D7005F5CBB /* HerbDetailsPresenter.swift */; };
+		216735511E01A7D7005F5CBB /* HerbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354D1E01A7D7005F5CBB /* HerbDetailsViewController.swift */; };
+		216735521E01A7D7005F5CBB /* HerbDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354F1E01A7D7005F5CBB /* HerbDetailsWireframe.swift */; };
+		216735541E01A802005F5CBB /* HerbDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735531E01A802005F5CBB /* HerbDetailsInteractor.swift */; };
+		21CCA77B1E01F80500D1AE2A /* HerbsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */; };
+		21CCA77C1E01F80A00D1AE2A /* HerbsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */; };
+		21CCA77E1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */; };
+		21CCA77F1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */; };
+		21CCA7801E01FE2700D1AE2A /* Extensions+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */; };
 		21D6334D1E0016A000D47859 /* ImageAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6334C1E0016A000D47859 /* ImageAccessor.swift */; };
 		21D6334E1E0016A000D47859 /* ImageAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6334C1E0016A000D47859 /* ImageAccessor.swift */; };
 		21D6334F1E0016A000D47859 /* ImageAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6334C1E0016A000D47859 /* ImageAccessor.swift */; };
@@ -77,12 +80,9 @@
 		1E877BC86907CBCECFBC697F /* Pods_HerbsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HerbsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2103E9061DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryPresenter.swift; path = Modules/HerbsGallery/UI/Presenter/HerbsGalleryPresenter.swift; sourceTree = "<group>"; };
 		212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Services/Network/NetworkManager.swift; sourceTree = "<group>"; };
-		215FCAAB1DFF54290076288C /* HerbsGalleryModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryModuleInterface.swift; path = Modules/HerbsGallery/ModuleInterface/HerbsGalleryModuleInterface.swift; sourceTree = "<group>"; };
 		215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryInteractor.swift; path = Modules/HerbsGallery/AppLogic/HerbsGalleryInteractor.swift; sourceTree = "<group>"; };
-		215FCAB31DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryInteractorProtocols.swift; path = Modules/HerbsGallery/AppLogic/HerbsGalleryInteractorProtocols.swift; sourceTree = "<group>"; };
 		21613D621DFEBEC900F4F046 /* Herbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Herbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21613D651DFEBEC900F4F046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21613D671DFEBEC900F4F046 /* HerbsGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerbsGalleryViewController.swift; sourceTree = "<group>"; };
 		21613D6A1DFEBEC900F4F046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21613D6C1DFEBEC900F4F046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21613D6F1DFEBEC900F4F046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +95,12 @@
 		21613D871DFEBEC900F4F046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21613D961DFECB7D00F4F046 /* HerbsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsAPI.swift; path = Services/Network/HerbsAPI.swift; sourceTree = "<group>"; };
 		21613D9B1DFED00100F4F046 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Common/Extensions.swift; sourceTree = "<group>"; };
+		216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryViewController.swift; path = Modules/HerbsGallery/UI/View/HerbsGalleryViewController.swift; sourceTree = "<group>"; };
+		2167354B1E01A7D7005F5CBB /* HerbDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HerbDetailsPresenter.swift; sourceTree = "<group>"; };
+		2167354D1E01A7D7005F5CBB /* HerbDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HerbDetailsViewController.swift; sourceTree = "<group>"; };
+		2167354F1E01A7D7005F5CBB /* HerbDetailsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HerbDetailsWireframe.swift; sourceTree = "<group>"; };
+		216735531E01A802005F5CBB /* HerbDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HerbDetailsInteractor.swift; sourceTree = "<group>"; };
+		21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UI.swift"; path = "Common/Extensions+UI.swift"; sourceTree = "<group>"; };
 		21D6334A1E0015C000D47859 /* HerbsAndHealthProblems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsAndHealthProblems.swift; path = Services/Network/Entities/HerbsAndHealthProblems.swift; sourceTree = "<group>"; };
 		21D6334C1E0016A000D47859 /* ImageAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageAccessor.swift; path = Services/ImageAccessor/ImageAccessor.swift; sourceTree = "<group>"; };
 		21D633531E00324300D47859 /* HerbsGalleryWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryWireframe.swift; path = Modules/HerbsGallery/UI/Wireframe/HerbsGalleryWireframe.swift; sourceTree = "<group>"; };
@@ -141,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				2103E9041DFF1506003F3FFE /* Application Logic */,
-				2103E9051DFF1519003F3FFE /* Module interface */,
 				2103E9001DFF14E1003F3FFE /* UI */,
 			);
 			name = HerbsGallery;
@@ -168,7 +173,7 @@
 		2103E9021DFF14F3003F3FFE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				21613D671DFEBEC900F4F046 /* HerbsGalleryViewController.swift */,
+				216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */,
 				21D6335C1E00544600D47859 /* CollectionViewCell.swift */,
 			);
 			name = View;
@@ -186,25 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */,
-				215FCAB31DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift */,
 			);
 			name = "Application Logic";
-			sourceTree = "<group>";
-		};
-		2103E9051DFF1519003F3FFE /* Module interface */ = {
-			isa = PBXGroup;
-			children = (
-				215FCAAB1DFF54290076288C /* HerbsGalleryModuleInterface.swift */,
-			);
-			name = "Module interface";
-			sourceTree = "<group>";
-		};
-		212E58751DFEDA3000C2E0D9 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				21D6334A1E0015C000D47859 /* HerbsAndHealthProblems.swift */,
-			);
-			name = Entities;
 			sourceTree = "<group>";
 		};
 		21613D591DFEBEC900F4F046 = {
@@ -236,10 +224,9 @@
 				21613D941DFEC34F00F4F046 /* Services */,
 				21613D931DFEBF6400F4F046 /* Modules */,
 				21D633571E003A5C00D47859 /* Assembly */,
+				216735431E01A48D005F5CBB /* Assets */,
+				216735441E01A49D005F5CBB /* Entities */,
 				21613D651DFEBEC900F4F046 /* AppDelegate.swift */,
-				21613D691DFEBEC900F4F046 /* Main.storyboard */,
-				21613D6C1DFEBEC900F4F046 /* Assets.xcassets */,
-				21613D6E1DFEBEC900F4F046 /* LaunchScreen.storyboard */,
 				21613D711DFEBEC900F4F046 /* Info.plist */,
 			);
 			path = Herbs;
@@ -266,6 +253,7 @@
 		21613D931DFEBF6400F4F046 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				216735451E01A56A005F5CBB /* HerbDetails */,
 				2103E8FF1DFF01EA003F3FFE /* HerbsGallery */,
 			);
 			name = Modules;
@@ -283,7 +271,6 @@
 		21613D951DFEC9E600F4F046 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				212E58751DFEDA3000C2E0D9 /* Entities */,
 				21613D961DFECB7D00F4F046 /* HerbsAPI.swift */,
 				212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */,
 			);
@@ -294,8 +281,80 @@
 			isa = PBXGroup;
 			children = (
 				21613D9B1DFED00100F4F046 /* Extensions.swift */,
+				21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		216735431E01A48D005F5CBB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				21613D691DFEBEC900F4F046 /* Main.storyboard */,
+				21613D6C1DFEBEC900F4F046 /* Assets.xcassets */,
+				21613D6E1DFEBEC900F4F046 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		216735441E01A49D005F5CBB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				21D6334A1E0015C000D47859 /* HerbsAndHealthProblems.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		216735451E01A56A005F5CBB /* HerbDetails */ = {
+			isa = PBXGroup;
+			children = (
+				216735481E01A7D7005F5CBB /* Application Logic */,
+				216735491E01A7D7005F5CBB /* UI */,
+			);
+			name = HerbDetails;
+			sourceTree = "<group>";
+		};
+		216735481E01A7D7005F5CBB /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				216735531E01A802005F5CBB /* HerbDetailsInteractor.swift */,
+			);
+			name = "Application Logic";
+			path = Modules/HerbDetails/AppLogic;
+			sourceTree = "<group>";
+		};
+		216735491E01A7D7005F5CBB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2167354A1E01A7D7005F5CBB /* Presenter */,
+				2167354C1E01A7D7005F5CBB /* View */,
+				2167354E1E01A7D7005F5CBB /* Wireframe */,
+			);
+			name = UI;
+			path = Modules/HerbDetails/UI;
+			sourceTree = "<group>";
+		};
+		2167354A1E01A7D7005F5CBB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2167354B1E01A7D7005F5CBB /* HerbDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2167354C1E01A7D7005F5CBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2167354D1E01A7D7005F5CBB /* HerbDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2167354E1E01A7D7005F5CBB /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				2167354F1E01A7D7005F5CBB /* HerbDetailsWireframe.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		21D633461E00140F00D47859 /* ImageAccessor */ = {
@@ -409,7 +468,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Siarhei Yakushevich";
 				TargetAttributes = {
 					21613D611DFEBEC900F4F046 = {
@@ -620,15 +679,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216735521E01A7D7005F5CBB /* HerbDetailsWireframe.swift in Sources */,
 				21D633541E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				2103E9071DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
-				215FCAB41DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift in Sources */,
 				21D633591E003BC500D47859 /* AppAssembly.swift in Sources */,
 				215FCAB01DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
+				216735501E01A7D7005F5CBB /* HerbDetailsPresenter.swift in Sources */,
+				216735471E01A653005F5CBB /* HerbsGalleryViewController.swift in Sources */,
+				216735511E01A7D7005F5CBB /* HerbDetailsViewController.swift in Sources */,
+				216735541E01A802005F5CBB /* HerbDetailsInteractor.swift in Sources */,
 				212E587B1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
-				21613D681DFEBEC900F4F046 /* HerbsGalleryViewController.swift in Sources */,
+				21CCA77E1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
 				21613D661DFEBEC900F4F046 /* AppDelegate.swift in Sources */,
-				215FCAAC1DFF54290076288C /* HerbsGalleryModuleInterface.swift in Sources */,
 				21613D971DFECB7D00F4F046 /* HerbsAPI.swift in Sources */,
 				21D6335D1E00544600D47859 /* CollectionViewCell.swift in Sources */,
 				21D633501E001DD600D47859 /* HerbsAndHealthProblems.swift in Sources */,
@@ -641,12 +703,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				215FCAB51DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift in Sources */,
+				21CCA77F1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
 				2103E9081DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
 				21613D7B1DFEBEC900F4F046 /* HerbsTests.swift in Sources */,
 				212E587C1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
-				215FCAAD1DFF54290076288C /* HerbsGalleryModuleInterface.swift in Sources */,
 				21613D9D1DFED00100F4F046 /* Extensions.swift in Sources */,
+				21CCA77C1E01F80A00D1AE2A /* HerbsGalleryViewController.swift in Sources */,
 				215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334E1E0016A000D47859 /* ImageAccessor.swift in Sources */,
 				21D6335E1E00544600D47859 /* CollectionViewCell.swift in Sources */,
@@ -661,12 +723,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				215FCAB61DFF5A860076288C /* HerbsGalleryInteractorProtocols.swift in Sources */,
+				21CCA7801E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
 				2103E9091DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
 				21613D861DFEBEC900F4F046 /* HerbsUITests.swift in Sources */,
 				212E587D1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
-				215FCAAE1DFF54290076288C /* HerbsGalleryModuleInterface.swift in Sources */,
 				21613D9E1DFED00100F4F046 /* Extensions.swift in Sources */,
+				21CCA77B1E01F80500D1AE2A /* HerbsGalleryViewController.swift in Sources */,
 				215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334F1E0016A000D47859 /* ImageAccessor.swift in Sources */,
 				21D6335F1E00544600D47859 /* CollectionViewCell.swift in Sources */,

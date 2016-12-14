@@ -9,6 +9,16 @@
 import Foundation
 import RxSwift
 
+//MARK: -  HerbsGalleryModuleInterface
+protocol HerbsGalleryModuleInterface {
+    func displayHerbs()
+    func didSelectItemAtIndex(index: Int)
+    func prepareForDisplay(destination view:Any)
+    var itemsSequence: Observable<[HerbsAndHealthProblemWrapper]> {get}
+    var isEmpty: Observable<Bool> {get}
+}
+
+//MARK: - HerbsGalleryPresenter
 final class HerbsGalleryPresenter {
     let interactor: HerbsGalleryInteractorProtocol
     let router: HerbsGalleryWireframeProtocol
@@ -16,7 +26,6 @@ final class HerbsGalleryPresenter {
     let isEmptySequence = Variable<Bool>(true)
     
     weak var vc: HerbsGalleryViewProtocol! = nil
-    
     
     let disposeBag = DisposeBag()
     var activeHerb: HerbsAndHealthProblemWrapper? = nil {
@@ -34,12 +43,16 @@ final class HerbsGalleryPresenter {
     }
 }
 
-//MARK: - HerbsGalleryModuleInterface
+//MARK: - HerbsGalleryModuleInterface's implementation
 extension HerbsGalleryPresenter: HerbsGalleryModuleInterface {
-    internal func displayDetailedInfoForActiveItem() {
-        
+    func prepareForDisplay(destination view:Any) {
+        guard let detailsModule = view as? HerbDetailsViewProtocol else {
+            assert(false)
+            return
+        }
+        router.prepareToDisplayItem(item: detailsModule, herbWrapper: activeHerb!)
     }
-
+    
     func didSelectItemAtIndex(index: Int) {
         let herbWrapper = itemsSequenceInner.value[index]
         activeHerb = herbWrapper

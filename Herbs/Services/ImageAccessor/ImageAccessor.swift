@@ -9,11 +9,6 @@
 import Foundation
 import RxSwift
 
-//MARK: - HerbsAndHealthProblemWrapper
-struct HerbsAndHealthProblemWrapper {
-    let herb: HerbsAndHealthProblem
-    let data: Data
-}
 
 typealias HerbsAndHealthProblemWrapperSequence = Observable<HerbsAndHealthProblemWrapper>
 

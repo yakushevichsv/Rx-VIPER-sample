@@ -10,6 +10,11 @@ import Foundation
 import RxSwift
 import RxOptional
 
+//MARK: - HerbsGalleryInteractorProtocol
+protocol HerbsGalleryInteractorProtocol {
+    func getAllHerbs() -> HerbsAndHealthProblemWrapperSequence
+}
+
 //MARK: - HerbsGalleryInteractor
 final class HerbsGalleryInteractor {
     let network: NetworkProtocol

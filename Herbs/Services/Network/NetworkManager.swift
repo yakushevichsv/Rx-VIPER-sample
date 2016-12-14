@@ -15,9 +15,11 @@ import RxSwift
 //MARK: - NetworkProtocol
 protocol NetworkProtocol {
     typealias OptHerbArraySequence = Observable<[HerbsAndHealthProblem]?>
-    func accessAllHerbs() -> OptHerbArraySequence
+    typealias OptHerbSequence = Observable<HerbsAndHealthProblem?>
     
-    func cancelOperation(sequence: OptHerbArraySequence)
+    func accessAllHerbs() -> OptHerbArraySequence
+    func accessHerb(herbType: HerbsAndHealthProblem.ObjectIdType) -> OptHerbSequence
+    func cancelOperation(sequence: Observable<Any?>) 
 }
 
 
@@ -28,11 +30,16 @@ final class NetworkManager {
 
 //MARK: NetworkProtocol's implementation
 extension NetworkManager: NetworkProtocol {
+    internal func accessHerb(herbType: HerbsAndHealthProblem.ObjectIdType) -> NetworkProtocol.OptHerbSequence {
+    
+        return  provider.request(HerbsAPI.retrieve(herbType)).debug().mapObjectOptional(type: HerbsAndHealthProblem.self)
+    }
+
     func accessAllHerbs() -> NetworkProtocol.OptHerbArraySequence {
         return  provider.request(HerbsAPI.basicQuery).debug().mapArrayOptional(type: HerbsAndHealthProblem.self, keyPath: "results")
     }
     
-    func cancelOperation(sequence: NetworkProtocol.OptHerbArraySequence) {
+    func cancelOperation(sequence: Observable<Any?>) {
         if let dispose = sequence as? Disposable {
             dispose.dispose()
         }

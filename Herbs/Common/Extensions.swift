@@ -6,7 +6,7 @@
 //  Copyright © 2016 Siarhei Yakushevich. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 let syEmptyString = ""
 
@@ -37,12 +37,5 @@ extension HerbsAndHealthProblem: Hashable {
 
     var hashValue: Int {
         return (objectId + "\(herbId)").hashValue
-    }
-}
-
-//MARK: - Data
-extension Data {
-    func toImage() -> UIImage?{
-       return UIImage(data: self)
     }
 }

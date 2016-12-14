@@ -8,7 +8,10 @@
 
 import UIKit
 //MARK: - HerbsGalleryWireframeProtocol
-protocol HerbsGalleryWireframeProtocol { }
+protocol HerbsGalleryWireframeProtocol {
+    func presentInWindowOnNeed(window: UIWindow)
+    func prepareToDisplayItem(item: HerbDetailsViewProtocol, herbWrapper: HerbsAndHealthProblemWrapper)
+}
 
 //MARK: - HerbsGalleryWireframe
 final class HerbsGalleryWireframe {
@@ -19,6 +22,10 @@ final class HerbsGalleryWireframe {
         self.network = network
         self.imageAccessor = imageAccessor
     }
+}
+
+//MARK: - HerbsGalleryWireframeProtocol's implementation
+extension HerbsGalleryWireframe: HerbsGalleryWireframeProtocol {
     
     func presentInWindowOnNeed(window: UIWindow) {
         let interactor = HerbsGalleryInteractor(network: network, imageAccessor: imageAccessor)
@@ -26,11 +33,19 @@ final class HerbsGalleryWireframe {
         assert(window.rootViewController is HerbsGalleryViewController)
         let herbsVC = window.rootViewController as! HerbsGalleryViewController
         
-        let presenter: HerbsGalleryModuleInterface = HerbsGalleryPresenter(interactor: interactor,wireframe: self,  view: herbsVC) as! HerbsGalleryModuleInterface
+        let presenter: HerbsGalleryModuleInterface = HerbsGalleryPresenter(interactor: interactor,wireframe: self,  view: herbsVC) as HerbsGalleryModuleInterface
         
         herbsVC.presenter = presenter
     }
+    
+    func prepareToDisplayItem(item: HerbDetailsViewProtocol, herbWrapper: HerbsAndHealthProblemWrapper) {
+        guard let dView = item as? HerbDetailsViewController else {
+            assert(false)
+            return
+        }
+        
+        let wireframe = HerbDetailsWireframe(network: network, imageAccessor: imageAccessor)
+        wireframe.define(view: dView, herbWrapper: herbWrapper)
+        
+    }
 }
-
-//MARK: - HerbsGalleryWireframeProtocol's implementation
-extension HerbsGalleryWireframe: HerbsGalleryWireframeProtocol {}
