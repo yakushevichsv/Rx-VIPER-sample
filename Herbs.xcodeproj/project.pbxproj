@@ -36,6 +36,14 @@
 		216735511E01A7D7005F5CBB /* HerbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354D1E01A7D7005F5CBB /* HerbDetailsViewController.swift */; };
 		216735521E01A7D7005F5CBB /* HerbDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354F1E01A7D7005F5CBB /* HerbDetailsWireframe.swift */; };
 		216735541E01A802005F5CBB /* HerbDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735531E01A802005F5CBB /* HerbDetailsInteractor.swift */; };
+		218B2B671E030ABD001C044B /* HerbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354D1E01A7D7005F5CBB /* HerbDetailsViewController.swift */; };
+		218B2B681E030ABE001C044B /* HerbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354D1E01A7D7005F5CBB /* HerbDetailsViewController.swift */; };
+		218B2B691E030AD0001C044B /* HerbDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354B1E01A7D7005F5CBB /* HerbDetailsPresenter.swift */; };
+		218B2B6A1E030AD0001C044B /* HerbDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354B1E01A7D7005F5CBB /* HerbDetailsPresenter.swift */; };
+		218B2B6B1E030ADC001C044B /* HerbDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735531E01A802005F5CBB /* HerbDetailsInteractor.swift */; };
+		218B2B6C1E030ADC001C044B /* HerbDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735531E01A802005F5CBB /* HerbDetailsInteractor.swift */; };
+		218B2B6D1E030AEB001C044B /* HerbDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354F1E01A7D7005F5CBB /* HerbDetailsWireframe.swift */; };
+		218B2B6E1E030AEC001C044B /* HerbDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2167354F1E01A7D7005F5CBB /* HerbDetailsWireframe.swift */; };
 		21CCA77B1E01F80500D1AE2A /* HerbsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */; };
 		21CCA77C1E01F80A00D1AE2A /* HerbsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216735461E01A653005F5CBB /* HerbsGalleryViewController.swift */; };
 		21CCA77E1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */; };
@@ -733,11 +741,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218B2B671E030ABD001C044B /* HerbDetailsViewController.swift in Sources */,
+				218B2B691E030AD0001C044B /* HerbDetailsPresenter.swift in Sources */,
 				21CCA77F1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
 				2103E9081DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
 				21613D7B1DFEBEC900F4F046 /* HerbsTests.swift in Sources */,
 				212E587C1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
+				218B2B6B1E030ADC001C044B /* HerbDetailsInteractor.swift in Sources */,
 				21613D9D1DFED00100F4F046 /* Extensions.swift in Sources */,
+				218B2B6D1E030AEB001C044B /* HerbDetailsWireframe.swift in Sources */,
 				21CCA77C1E01F80A00D1AE2A /* HerbsGalleryViewController.swift in Sources */,
 				215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334E1E0016A000D47859 /* ImageAccessor.swift in Sources */,
@@ -755,11 +767,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218B2B681E030ABE001C044B /* HerbDetailsViewController.swift in Sources */,
+				218B2B6A1E030AD0001C044B /* HerbDetailsPresenter.swift in Sources */,
 				21CCA7801E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
 				2103E9091DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
 				21613D861DFEBEC900F4F046 /* HerbsUITests.swift in Sources */,
 				212E587D1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
+				218B2B6C1E030ADC001C044B /* HerbDetailsInteractor.swift in Sources */,
 				21613D9E1DFED00100F4F046 /* Extensions.swift in Sources */,
+				218B2B6E1E030AEC001C044B /* HerbDetailsWireframe.swift in Sources */,
 				21CCA77B1E01F80500D1AE2A /* HerbsGalleryViewController.swift in Sources */,
 				215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334F1E0016A000D47859 /* ImageAccessor.swift in Sources */,

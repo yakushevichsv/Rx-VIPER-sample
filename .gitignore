@@ -32,7 +32,8 @@ timeline.xctimeline
 playground.xcworkspace
 
 .build/
-./Pods/
+Pods
 
 .DS_Store
-./Herbs.xcworkspace/xcuserdata
+Herbs.xcworkspace/xcuserdata/
+
