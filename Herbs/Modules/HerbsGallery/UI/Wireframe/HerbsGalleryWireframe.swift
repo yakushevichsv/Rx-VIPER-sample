@@ -10,14 +10,14 @@ import UIKit
 //MARK: - HerbsGalleryWireframeProtocol
 protocol HerbsGalleryWireframeProtocol {
     func presentInWindowOnNeed(window: UIWindow)
-    func prepareToDisplayItem(item: HerbDetailsViewProtocol, herbWrapper: HerbsAndHealthProblemWrapper)
+    func prepareToDisplayItem(item: HerbDetailsViewProtocol, herbWrapper: HerbsAndHealthProblemWrapper, frame: CGRect)
 }
 
 //MARK: - HerbsGalleryWireframe
 final class HerbsGalleryWireframe {
     let network: NetworkProtocol
     let imageAccessor: ImageAccesorProtocol
-    
+    let transitioner = DetailsTransitioner()
     init(network: NetworkProtocol, imageAccessor: ImageAccesorProtocol) {
         self.network = network
         self.imageAccessor = imageAccessor
@@ -38,14 +38,20 @@ extension HerbsGalleryWireframe: HerbsGalleryWireframeProtocol {
         herbsVC.presenter = presenter
     }
     
-    func prepareToDisplayItem(item: HerbDetailsViewProtocol, herbWrapper: HerbsAndHealthProblemWrapper) {
+    func prepareToDisplayItem(item: HerbDetailsViewProtocol, herbWrapper: HerbsAndHealthProblemWrapper , frame: CGRect) {
         guard let dView = item as? HerbDetailsViewController else {
             assert(false)
             return
         }
         
-        let wireframe = HerbDetailsWireframe(network: network, imageAccessor: imageAccessor)
+        let wireframe = HerbDetailsWireframe(network: network, imageAccessor: imageAccessor, frame:frame)
         wireframe.define(view: dView, herbWrapper: herbWrapper)
-        
+        /*dView.transitioningDelegate = transitioner
+        transitioner.originFrame = frame
+        transitioner.completionBlock = {
+            dView.presenter.displayLabels()
+        }*/
+        //let transitioner = DetailsTransitioner()
+        //dView.modalPresentationStyle = .custom
     }
 }

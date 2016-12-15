@@ -17,10 +17,12 @@ protocol HerbDetailsWireframeProtocol {
 final class HerbDetailsWireframe {
     let network: NetworkProtocol
     let imageAccessor: ImageAccesorProtocol
+    let transitioner = DetailsTransitioner()
     
-    init(network: NetworkProtocol, imageAccessor: ImageAccesorProtocol) {
+    init(network: NetworkProtocol, imageAccessor: ImageAccesorProtocol, frame: CGRect) {
         self.network = network
         self.imageAccessor = imageAccessor
+        self.transitioner.originFrame = frame
     }
 }
 
@@ -31,5 +33,13 @@ extension HerbDetailsWireframe: HerbDetailsWireframeProtocol {
         let presenter = HerbDetailsPresenter(interactor: interactor, wireframe: self, view: vc)
         presenter.wrapper = herbWrapper
         vc.presenter = presenter
+        transitioner.initialBlock = {
+            presenter.hideLabels()
+        }
+        transitioner.completionBlock = {
+            presenter.displayLabels()
+        }
+       vc.transitioningDelegate = transitioner
+        vc.modalPresentationStyle = .custom
     }
 }

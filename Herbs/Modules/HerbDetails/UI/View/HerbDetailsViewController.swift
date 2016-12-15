@@ -12,12 +12,10 @@ import RxDataSources
 import RxCocoa
 
 //MARK: - HerbDetailsViewProtocol
-protocol HerbDetailsViewProtocol: class {
-    func displayLoadingProgress()
-    func hideLoadingProgress()
+protocol HerbDetailsViewProtocol: class, UICommuncationProtocol {
+    func hideLabels()
+    func displayLabels()
     func didReceiveDetailsInfo(wrapper: HerbsAndHealthProblemWrapper)
-    func present(error: Error)
-    func dismiss()
 }
 
 //MARK: - HerbDetailsViewController
@@ -28,9 +26,9 @@ final class HerbDetailsViewController: UIViewController {
     @IBOutlet weak var lblHerbDescription: UILabel!
     @IBOutlet weak var lblCreatedTime: UILabel!
     @IBOutlet weak var lblUpdatedTime: UILabel!
+    @IBOutlet weak var btnClose: UIButton!
     
     let disposeBag = DisposeBag()
-    
     var presenter: HerbDetailsModuleInterface! = nil {
         didSet {
             configure()
@@ -54,38 +52,39 @@ final class HerbDetailsViewController: UIViewController {
 
 //MARK: - HerbDetailsViewProtocol's implementation
 extension HerbDetailsViewController: HerbDetailsViewProtocol {
-    internal func didReceiveDetailsInfo(wrapper: HerbsAndHealthProblemWrapper) {
-        debugPrint(#function)
-        herbImage.image = wrapper.data.toImage()
-        lblHerbName.text = wrapper.herb.herbName
-        lblHerbDescription.text = wrapper.herb.healthProblemName
-        lblCreatedTime.text = wrapper.herb.createdAt?.description ?? String.empty
-        lblUpdatedTime.text = wrapper.herb.updatedAt?.description ?? String.empty
-    }
-    
-    func dismiss() {
-        if let pVC = self.presentingViewController {
-            pVC.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    func present(error: Error)  {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) {(_) in
-            self.dismiss(animated: false, completion: nil)
-        }
-        alert.addAction(okAction)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-
     func displayLoadingProgress() {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        debugPrint(#function)
+        herbImage.displayActivityIndicator()
     }
     
     func hideLoadingProgress() {
+        herbImage.hideActivityIndicator()
+    }
+
+    
+    func hideLabels() {
+        change(labelsAlpha: 0.0)
+        btnClose.isHidden = true
+        
+    }
+    
+    func displayLabels() {
+        change(labelsAlpha: 1.0)
+        btnClose.isHidden = false
+    }
+    
+    private func change(labelsAlpha alpha: CGFloat) {
+        [lblHerbName, lblCreatedTime,lblUpdatedTime,lblHerbDescription].forEach{
+            $0?.alpha = alpha
+        }
+    }
+    
+    internal func didReceiveDetailsInfo(wrapper: HerbsAndHealthProblemWrapper) {
         debugPrint(#function)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
+        herbImage.image = wrapper.data.toImage()
+        lblHerbName.text = wrapper.herb.herbName
+        lblHerbDescription.text = wrapper.herb.healthProblemName
+        lblCreatedTime.text = wrapper.herb.createdAt?.shortDescription() ?? String.empty
+        lblUpdatedTime.text = wrapper.herb.updatedAt?.shortDescription() ?? String.empty
     }
 }

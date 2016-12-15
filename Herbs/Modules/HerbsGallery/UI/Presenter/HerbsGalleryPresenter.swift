@@ -13,7 +13,7 @@ import RxSwift
 protocol HerbsGalleryModuleInterface {
     func displayHerbs()
     func didSelectItemAtIndex(index: Int)
-    func prepareForDisplay(destination view:Any)
+    func prepareForDisplay(destination view:Any, initialFrame: CGRect)
     var itemsSequence: Observable<[HerbsAndHealthProblemWrapper]> {get}
     var isEmpty: Observable<Bool> {get}
 }
@@ -45,12 +45,12 @@ final class HerbsGalleryPresenter {
 
 //MARK: - HerbsGalleryModuleInterface's implementation
 extension HerbsGalleryPresenter: HerbsGalleryModuleInterface {
-    func prepareForDisplay(destination view:Any) {
+    func prepareForDisplay(destination view: Any, initialFrame: CGRect) {
         guard let detailsModule = view as? HerbDetailsViewProtocol else {
             assert(false)
             return
         }
-        router.prepareToDisplayItem(item: detailsModule, herbWrapper: activeHerb!)
+        router.prepareToDisplayItem(item: detailsModule, herbWrapper: activeHerb!,frame: initialFrame)
     }
     
     func didSelectItemAtIndex(index: Int) {
@@ -71,6 +71,7 @@ extension HerbsGalleryPresenter: HerbsGalleryModuleInterface {
     
     func displayHerbs() {
         let result = self.interactor.getAllHerbs()
+        displayActivityIndicator()
         self.vc.displayLoadingProgress()
         result.subscribeOn(MainScheduler.instance).subscribe {[unowned self] (event) in
             switch event {
@@ -79,12 +80,14 @@ extension HerbsGalleryPresenter: HerbsGalleryModuleInterface {
                 self.itemsSequenceInner.value += [herbs]
                 break
             case .completed:
+                hideActivityIndicator()
                 self.vc.hideLoadingProgress()
                 if self.itemsSequenceInner.value.count != 0 {
                     self.didSelectItemAtIndex(index: 0)
                 }
                 break
             case .error(let error):
+                hideActivityIndicator()
                 self.vc.hideLoadingProgress()
                 self.vc.present(error: error)
                 break

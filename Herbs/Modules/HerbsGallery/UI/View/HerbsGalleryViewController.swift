@@ -12,12 +12,8 @@ import RxDataSources
 import RxCocoa
 
 //MARK: - HerbsGalleryViewProtocol
-protocol HerbsGalleryViewProtocol: class {
-    func displayLoadingProgress()
-    func hideLoadingProgress()
+protocol HerbsGalleryViewProtocol: UICommuncationProtocol {
     func didReceiveItems(items: [HerbsAndHealthProblemWrapper])
-    func present(error: Error)
-    
     func needToUpdateHerbImage(data: Data)
     func needToUpdateHerbDescription(text: String)
 }
@@ -47,9 +43,6 @@ final class HerbsGalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //self.btnHerbDetails.rx.isEnabled.asObsver
         configure()
     }
     
@@ -76,12 +69,26 @@ final class HerbsGalleryViewController: UIViewController {
             super.prepare(for: segue, sender: sender)
             return
         }
-        presenter.prepareForDisplay(destination: segue.destination)
+        
+        let wFrame  = herbImage.superview!.convert(herbImage.frame, to: nil)
+        
+        
+        presenter.prepareForDisplay(destination: segue.destination,initialFrame: wFrame)
     }
 }
 
 //MARK: - HerbsGalleryViewProtocol's implementation
 extension HerbsGalleryViewController: HerbsGalleryViewProtocol {
+    func displayLoadingProgress() {
+        cvHerbs.displayActivityIndicator()
+        herbImage.displayActivityIndicator()
+    }
+
+    func hideLoadingProgress() {
+        cvHerbs.hideActivityIndicator()
+        herbImage.hideActivityIndicator()
+    }
+
     func needToUpdateHerbImage(data: Data) {
         self.herbImage.image = data.toImage()
     }
@@ -92,25 +99,5 @@ extension HerbsGalleryViewController: HerbsGalleryViewProtocol {
     
     func didReceiveItems(items: [HerbsAndHealthProblemWrapper]) {
         debugPrint(#function)
-    }
-    
-    func present(error: Error)  {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) {(_) in
-            self.dismiss(animated: false, completion: nil)
-        }
-        alert.addAction(okAction)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-
-    func displayLoadingProgress() {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        debugPrint(#function)
-    }
-    
-    func hideLoadingProgress() {
-        debugPrint(#function)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }

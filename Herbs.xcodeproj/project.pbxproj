@@ -13,6 +13,9 @@
 		212E587B1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */; };
 		212E587C1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */; };
 		212E587D1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */; };
+		214954AD1E02EFA800301523 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214954AC1E02EFA800301523 /* Protocol.swift */; };
+		214954AE1E02EFA800301523 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214954AC1E02EFA800301523 /* Protocol.swift */; };
+		214954AF1E02EFA800301523 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214954AC1E02EFA800301523 /* Protocol.swift */; };
 		215FCAB01DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
 		215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
 		215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
@@ -53,6 +56,9 @@
 		21D6335D1E00544600D47859 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6335C1E00544600D47859 /* CollectionViewCell.swift */; };
 		21D6335E1E00544600D47859 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6335C1E00544600D47859 /* CollectionViewCell.swift */; };
 		21D6335F1E00544600D47859 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6335C1E00544600D47859 /* CollectionViewCell.swift */; };
+		21DC6A021E0293150026B9DB /* DetailsTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DC6A011E0293150026B9DB /* DetailsTransitioner.swift */; };
+		21DC6A031E0293150026B9DB /* DetailsTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DC6A011E0293150026B9DB /* DetailsTransitioner.swift */; };
+		21DC6A041E0293150026B9DB /* DetailsTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DC6A011E0293150026B9DB /* DetailsTransitioner.swift */; };
 		684F8F4C03EE4A832C70C445 /* Pods_HerbsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFA1F5E99948FBFD2D839C /* Pods_HerbsUITests.framework */; };
 		936ACDE2CB1226D3B0358A11 /* Pods_Herbs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D474D7817D08AA8D64E892B /* Pods_Herbs.framework */; };
 		D0AC3CDF4119A707C0487A88 /* Pods_HerbsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E877BC86907CBCECFBC697F /* Pods_HerbsTests.framework */; };
@@ -80,6 +86,7 @@
 		1E877BC86907CBCECFBC697F /* Pods_HerbsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HerbsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2103E9061DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryPresenter.swift; path = Modules/HerbsGallery/UI/Presenter/HerbsGalleryPresenter.swift; sourceTree = "<group>"; };
 		212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Services/Network/NetworkManager.swift; sourceTree = "<group>"; };
+		214954AC1E02EFA800301523 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocol.swift; path = Common/Protocol/Protocol.swift; sourceTree = "<group>"; };
 		215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryInteractor.swift; path = Modules/HerbsGallery/AppLogic/HerbsGalleryInteractor.swift; sourceTree = "<group>"; };
 		21613D621DFEBEC900F4F046 /* Herbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Herbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21613D651DFEBEC900F4F046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 		21D633531E00324300D47859 /* HerbsGalleryWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryWireframe.swift; path = Modules/HerbsGallery/UI/Wireframe/HerbsGalleryWireframe.swift; sourceTree = "<group>"; };
 		21D633581E003BC500D47859 /* AppAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppAssembly.swift; path = Assembly/AppAssembly.swift; sourceTree = "<group>"; };
 		21D6335C1E00544600D47859 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = Modules/HerbsGallery/UI/View/CollectionViewCell.swift; sourceTree = "<group>"; };
+		21DC6A011E0293150026B9DB /* DetailsTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsTransitioner.swift; path = Modules/HerbsGallery/UI/Wireframe/DetailsTransitioner.swift; sourceTree = "<group>"; };
 		238C4B143DD887EFBD964A13 /* Pods-HerbsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HerbsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HerbsTests/Pods-HerbsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		379A0254FB9DA68E118A73C5 /* Pods-HerbsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HerbsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HerbsUITests/Pods-HerbsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4513492F9678562AA173945B /* Pods-HerbsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HerbsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HerbsUITests/Pods-HerbsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				21D633531E00324300D47859 /* HerbsGalleryWireframe.swift */,
+				21DC6A011E0293150026B9DB /* DetailsTransitioner.swift */,
 			);
 			name = Wireframe;
 			sourceTree = "<group>";
@@ -193,6 +202,23 @@
 				215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */,
 			);
 			name = "Application Logic";
+			sourceTree = "<group>";
+		};
+		214954AA1E02EF6500301523 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21613D9B1DFED00100F4F046 /* Extensions.swift */,
+				21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		214954AB1E02EF7100301523 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				214954AC1E02EFA800301523 /* Protocol.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		21613D591DFEBEC900F4F046 = {
@@ -280,8 +306,8 @@
 		21613D9A1DFECFED00F4F046 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				21613D9B1DFED00100F4F046 /* Extensions.swift */,
-				21CCA77D1E01FE2700D1AE2A /* Extensions+UI.swift */,
+				214954AB1E02EF7100301523 /* Protocol */,
+				214954AA1E02EF6500301523 /* Extensions */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -683,10 +709,12 @@
 				21D633541E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				2103E9071DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
 				21D633591E003BC500D47859 /* AppAssembly.swift in Sources */,
+				21DC6A021E0293150026B9DB /* DetailsTransitioner.swift in Sources */,
 				215FCAB01DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				216735501E01A7D7005F5CBB /* HerbDetailsPresenter.swift in Sources */,
 				216735471E01A653005F5CBB /* HerbsGalleryViewController.swift in Sources */,
 				216735511E01A7D7005F5CBB /* HerbDetailsViewController.swift in Sources */,
+				214954AD1E02EFA800301523 /* Protocol.swift in Sources */,
 				216735541E01A802005F5CBB /* HerbDetailsInteractor.swift in Sources */,
 				212E587B1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
 				21CCA77E1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
@@ -711,11 +739,13 @@
 				21CCA77C1E01F80A00D1AE2A /* HerbsGalleryViewController.swift in Sources */,
 				215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334E1E0016A000D47859 /* ImageAccessor.swift in Sources */,
+				21DC6A031E0293150026B9DB /* DetailsTransitioner.swift in Sources */,
 				21D6335E1E00544600D47859 /* CollectionViewCell.swift in Sources */,
 				21D633551E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				21D6335A1E003BC500D47859 /* AppAssembly.swift in Sources */,
 				21D633511E001DD700D47859 /* HerbsAndHealthProblems.swift in Sources */,
 				21613D981DFECB7D00F4F046 /* HerbsAPI.swift in Sources */,
+				214954AE1E02EFA800301523 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,11 +761,13 @@
 				21CCA77B1E01F80500D1AE2A /* HerbsGalleryViewController.swift in Sources */,
 				215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334F1E0016A000D47859 /* ImageAccessor.swift in Sources */,
+				21DC6A041E0293150026B9DB /* DetailsTransitioner.swift in Sources */,
 				21D6335F1E00544600D47859 /* CollectionViewCell.swift in Sources */,
 				21D633561E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				21D6335B1E003BC500D47859 /* AppAssembly.swift in Sources */,
 				21D633521E001DD700D47859 /* HerbsAndHealthProblems.swift in Sources */,
 				21613D991DFECB7D00F4F046 /* HerbsAPI.swift in Sources */,
+				214954AF1E02EFA800301523 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

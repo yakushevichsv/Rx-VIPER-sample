@@ -14,6 +14,8 @@ protocol HerbDetailsModuleInterface {
     func displayDetails()
     func cancelDisplay()
     func hide()
+    func hideLabels()
+    func displayLabels()
 }
 
 //MARK: - HerbDetailsPresenter
@@ -23,8 +25,7 @@ final class HerbDetailsPresenter {
     let disposeBag = DisposeBag()
     
     var operation: Disposable! = nil
-    var wrapper: HerbsAndHealthProblemWrapper! = nil
-    
+    var wrapper: HerbsAndHealthProblemWrapper! = nil     
     weak var vc: HerbDetailsViewProtocol! = nil
     
     init(interactor: HerbDetailsInteractorProtocol, wireframe router: HerbDetailsWireframeProtocol,
@@ -38,8 +39,16 @@ final class HerbDetailsPresenter {
 
 //MARK: - HerbDetailsModuleInterface's implementation
 extension HerbDetailsPresenter: HerbDetailsModuleInterface {
+    func hideLabels() {
+        vc.hideLabels()
+    }
+    func displayLabels() {
+        vc.displayLabels()
+    }
+    
     func hide() {
         cancelDisplay()
+        hideLabels()
         self.vc.dismiss()
     }
     
@@ -52,6 +61,7 @@ extension HerbDetailsPresenter: HerbDetailsModuleInterface {
     
     func displayDetails() {
         let result = self.interactor.getHerbDetails(herbWrapper: wrapper)
+        displayActivityIndicator()
         self.vc.displayLoadingProgress()
         operation = result.subscribeOn(MainScheduler.instance).subscribe {[unowned self] (event) in
             switch event {
@@ -60,10 +70,12 @@ extension HerbDetailsPresenter: HerbDetailsModuleInterface {
                 break
             case .completed:
                 self.operation = nil
+                hideActivityIndicator()
                 self.vc.hideLoadingProgress()
                 break
             case .error(let error):
                 self.operation = nil
+                hideActivityIndicator()
                 self.vc.hideLoadingProgress()
                 self.vc.present(error: error)
                 break

@@ -39,3 +39,11 @@ extension HerbsAndHealthProblem: Hashable {
         return (objectId + "\(herbId)").hashValue
     }
 }
+
+extension Date {
+    func shortDescription() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter.string(from: self)
+    }
+}
