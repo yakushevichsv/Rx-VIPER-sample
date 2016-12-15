@@ -53,7 +53,11 @@ extension UIView {
 //MARK: - UIViewController
 extension UIViewController {
     func present(error: Error, animated: Bool = true, completion:(() -> Void)? = nil)  {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        present(title: "Error", message: error.localizedDescription, animated: animated, completion: completion)
+    }
+    
+    func present(title: String , message: String, animated: Bool = true, completion:(() -> Void)? = nil)  {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) {(_) in
             self.dismiss(animated: false, completion: nil)
         }

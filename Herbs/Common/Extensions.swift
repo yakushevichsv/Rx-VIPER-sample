@@ -40,10 +40,31 @@ extension HerbsAndHealthProblem: Hashable {
     }
 }
 
+//MARK: - Date
 extension Date {
     func shortDescription() -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         return formatter.string(from: self)
+    }
+}
+
+//MARK: - Error
+extension Error {
+    var isNetworkIssue: Bool {
+        let nsError = self as NSError
+        return nsError.isNetworkIssue
+    }
+}
+
+//MARK: - NSError 
+extension NSError {
+    var isNetworkIssue: Bool {
+        get {
+            return domain == (NSErrorDomain() as String) &&
+                (code == NSURLErrorCannotFindHost ||
+                    code == NSURLErrorCannotConnectToHost ||
+                    code == NSURLErrorNotConnectedToInternet)
+        }
     }
 }
