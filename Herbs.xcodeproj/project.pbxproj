@@ -87,6 +87,7 @@
 		2103E9061DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryPresenter.swift; path = Modules/HerbsGallery/UI/Presenter/HerbsGalleryPresenter.swift; sourceTree = "<group>"; };
 		212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Services/Network/NetworkManager.swift; sourceTree = "<group>"; };
 		214954AC1E02EFA800301523 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocol.swift; path = Common/Protocol/Protocol.swift; sourceTree = "<group>"; };
+		214954B01E02F44C00301523 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryInteractor.swift; path = Modules/HerbsGallery/AppLogic/HerbsGalleryInteractor.swift; sourceTree = "<group>"; };
 		21613D621DFEBEC900F4F046 /* Herbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Herbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21613D651DFEBEC900F4F046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +225,7 @@
 		21613D591DFEBEC900F4F046 = {
 			isa = PBXGroup;
 			children = (
+				214954B01E02F44C00301523 /* README.md */,
 				21613D641DFEBEC900F4F046 /* Herbs */,
 				21613D791DFEBEC900F4F046 /* HerbsTests */,
 				21613D841DFEBEC900F4F046 /* HerbsUITests */,
