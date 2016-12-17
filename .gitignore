@@ -35,5 +35,9 @@ playground.xcworkspace
 Pods
 
 .DS_Store
-Herbs.xcworkspace/xcuserdata/
+./Herbs.xcworkspace/xcuserdata/
+./Herbs.xcodeproj/xcuserdata/
+./Herbs/Services/Network/.DS_Store
+.idea
+
 
