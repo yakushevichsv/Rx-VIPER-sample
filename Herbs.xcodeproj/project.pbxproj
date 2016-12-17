@@ -16,6 +16,12 @@
 		214954AD1E02EFA800301523 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214954AC1E02EFA800301523 /* Protocol.swift */; };
 		214954AE1E02EFA800301523 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214954AC1E02EFA800301523 /* Protocol.swift */; };
 		214954AF1E02EFA800301523 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214954AC1E02EFA800301523 /* Protocol.swift */; };
+		214B58C11E04AAFE0030244B /* GoogleSearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214B58C01E04AAFE0030244B /* GoogleSearchImage.swift */; };
+		214B58C21E04AAFE0030244B /* GoogleSearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214B58C01E04AAFE0030244B /* GoogleSearchImage.swift */; };
+		214B58C31E04AAFE0030244B /* GoogleSearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214B58C01E04AAFE0030244B /* GoogleSearchImage.swift */; };
+		2153C2761E0471DA0005091B /* GoogleImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2153C2751E0471DA0005091B /* GoogleImageAPI.swift */; };
+		2153C2771E0471DA0005091B /* GoogleImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2153C2751E0471DA0005091B /* GoogleImageAPI.swift */; };
+		2153C2781E0471DA0005091B /* GoogleImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2153C2751E0471DA0005091B /* GoogleImageAPI.swift */; };
 		215FCAB01DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
 		215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
 		215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */; };
@@ -96,6 +102,8 @@
 		212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Services/Network/NetworkManager.swift; sourceTree = "<group>"; };
 		214954AC1E02EFA800301523 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocol.swift; path = Common/Protocol/Protocol.swift; sourceTree = "<group>"; };
 		214954B01E02F44C00301523 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		214B58C01E04AAFE0030244B /* GoogleSearchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleSearchImage.swift; path = Services/Network/Entities/GoogleSearchImage.swift; sourceTree = "<group>"; };
+		2153C2751E0471DA0005091B /* GoogleImageAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleImageAPI.swift; path = Services/Network/GoogleImageAPI/GoogleImageAPI.swift; sourceTree = "<group>"; };
 		215FCAAF1DFF5A0E0076288C /* HerbsGalleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerbsGalleryInteractor.swift; path = Modules/HerbsGallery/AppLogic/HerbsGalleryInteractor.swift; sourceTree = "<group>"; };
 		21613D621DFEBEC900F4F046 /* Herbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Herbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21613D651DFEBEC900F4F046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +238,14 @@
 			name = Protocol;
 			sourceTree = "<group>";
 		};
+		2153C2791E0471E10005091B /* GoogleImageAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2153C2751E0471DA0005091B /* GoogleImageAPI.swift */,
+			);
+			name = GoogleImageAPI;
+			sourceTree = "<group>";
+		};
 		21613D591DFEBEC900F4F046 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +325,7 @@
 			children = (
 				21613D961DFECB7D00F4F046 /* HerbsAPI.swift */,
 				212E587A1DFEE4C300C2E0D9 /* NetworkManager.swift */,
+				2153C2791E0471E10005091B /* GoogleImageAPI */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -336,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				21D6334A1E0015C000D47859 /* HerbsAndHealthProblems.swift */,
+				214B58C01E04AAFE0030244B /* GoogleSearchImage.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -715,6 +733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214B58C11E04AAFE0030244B /* GoogleSearchImage.swift in Sources */,
 				216735521E01A7D7005F5CBB /* HerbDetailsWireframe.swift in Sources */,
 				21D633541E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				2103E9071DFF1EB3003F3FFE /* HerbsGalleryPresenter.swift in Sources */,
@@ -728,6 +747,7 @@
 				216735541E01A802005F5CBB /* HerbDetailsInteractor.swift in Sources */,
 				212E587B1DFEE4C300C2E0D9 /* NetworkManager.swift in Sources */,
 				21CCA77E1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
+				2153C2761E0471DA0005091B /* GoogleImageAPI.swift in Sources */,
 				21613D661DFEBEC900F4F046 /* AppDelegate.swift in Sources */,
 				21613D971DFECB7D00F4F046 /* HerbsAPI.swift in Sources */,
 				21D6335D1E00544600D47859 /* CollectionViewCell.swift in Sources */,
@@ -741,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214B58C21E04AAFE0030244B /* GoogleSearchImage.swift in Sources */,
 				218B2B671E030ABD001C044B /* HerbDetailsViewController.swift in Sources */,
 				218B2B691E030AD0001C044B /* HerbDetailsPresenter.swift in Sources */,
 				21CCA77F1E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
@@ -754,6 +775,7 @@
 				215FCAB11DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334E1E0016A000D47859 /* ImageAccessor.swift in Sources */,
 				21DC6A031E0293150026B9DB /* DetailsTransitioner.swift in Sources */,
+				2153C2771E0471DA0005091B /* GoogleImageAPI.swift in Sources */,
 				21D6335E1E00544600D47859 /* CollectionViewCell.swift in Sources */,
 				21D633551E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				21D6335A1E003BC500D47859 /* AppAssembly.swift in Sources */,
@@ -767,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214B58C31E04AAFE0030244B /* GoogleSearchImage.swift in Sources */,
 				218B2B681E030ABE001C044B /* HerbDetailsViewController.swift in Sources */,
 				218B2B6A1E030AD0001C044B /* HerbDetailsPresenter.swift in Sources */,
 				21CCA7801E01FE2700D1AE2A /* Extensions+UI.swift in Sources */,
@@ -780,6 +803,7 @@
 				215FCAB21DFF5A0E0076288C /* HerbsGalleryInteractor.swift in Sources */,
 				21D6334F1E0016A000D47859 /* ImageAccessor.swift in Sources */,
 				21DC6A041E0293150026B9DB /* DetailsTransitioner.swift in Sources */,
+				2153C2781E0471DA0005091B /* GoogleImageAPI.swift in Sources */,
 				21D6335F1E00544600D47859 /* CollectionViewCell.swift in Sources */,
 				21D633561E00324300D47859 /* HerbsGalleryWireframe.swift in Sources */,
 				21D6335B1E003BC500D47859 /* AppAssembly.swift in Sources */,
