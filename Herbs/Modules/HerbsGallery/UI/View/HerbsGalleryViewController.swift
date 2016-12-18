@@ -25,6 +25,8 @@ final class HerbsGalleryViewController: UIViewController {
     @IBOutlet weak var herbDescription: UITextView!
     @IBOutlet weak var cvHerbs: UICollectionView!
     @IBOutlet weak var btnHerbDetails: UIButton!
+    @IBOutlet weak var centerLogo: UIImageView!
+    var launchedAnimationOnce = false
     
     let disposeBag = DisposeBag()
     
@@ -44,6 +46,16 @@ final class HerbsGalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        addRxInCenterForLogo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard launchedAnimationOnce == false else { return }
+        launchedAnimationOnce = true
+        
+        animateRxLogo()
     }
     
     func prepareCollection() {
@@ -74,6 +86,42 @@ final class HerbsGalleryViewController: UIViewController {
         
         
         presenter.prepareForDisplay(destination: segue.destination,initialFrame: wFrame)
+    }
+}
+
+//MARK: - HerbsGalleryViewController 
+extension HerbsGalleryViewController {
+    func addRxInCenterForLogo() {
+        let view = UIView()
+        view.backgroundColor  = UIColor.white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubviewWithConstraints(view: view)
+        
+        self.view.addSubviewAtCenter(view: self.centerLogo)
+    }
+    
+    func animateRxLogo() {
+        guard let index = view.subviews.index(of: centerLogo)  else {
+            assert(false)
+            return
+        }
+        let bIndex = view.subviews.index(before: index)
+        let bView = view.subviews[bIndex]
+        
+        self.centerLogo.layer.allowsEdgeAntialiasing = true
+        //view.subviews[bIndex]
+        UIView.animate(withDuration: 1.5, animations: { [unowned self] in
+            self.centerLogo.bounds = CGRect(x: 0, y: 0, width: 1200, height: 1200)
+        }) { (finished) in
+            UIView.animate(withDuration: 0.5, animations: {
+                bView.alpha = 0.0
+                self.centerLogo.alpha = 0.0
+            }) {[unowned self] (_) in
+                bView.removeFromSuperview()
+                self.centerLogo.removeFromSuperview()
+                self.centerLogo = nil
+            }
+        }
     }
 }
 

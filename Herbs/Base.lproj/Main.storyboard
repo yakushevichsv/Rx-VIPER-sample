@@ -115,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="btnHerbDetails" destination="MJq-Q3-x8X" id="5iz-xL-BKM"/>
+                        <outlet property="centerLogo" destination="Tjs-zy-cmz" id="AxD-pV-8St"/>
                         <outlet property="cvHerbs" destination="ej5-GX-JTA" id="MBz-MW-DHY"/>
                         <outlet property="herbDescription" destination="WCN-nm-oZV" id="1IN-mF-W1Z"/>
                         <outlet property="herbImage" destination="kVA-PS-hv6" id="Vcv-Gu-pYS"/>
@@ -122,6 +123,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rxLogoM" id="Tjs-zy-cmz">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="-18" y="39"/>
         </scene>
@@ -227,4 +232,7 @@
             <point key="canvasLocation" x="816.79999999999995" y="39.130434782608695"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rxLogoM" width="128" height="128"/>
+    </resources>
 </document>

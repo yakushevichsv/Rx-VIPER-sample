@@ -86,4 +86,43 @@ func hideActivityIndicator() {
     UIApplication.shared.isNetworkActivityIndicatorVisible = false
 }
 
+//MARK: - UIView display subview 
+extension UIView {
+    private func addOrBringToFront(view: UIView) {
+        if view.superview != self {
+            view.removeFromSuperview()
+        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        if view.superview == nil {
+            addSubview(view)
+        }
+        else {
+            bringSubview(toFront: view)
+        }
+    }
+    
+    private func activate(constraints: [NSLayoutConstraint]) {
+        constraints.forEach{ $0.isActive = true }
+    }
+    
+    func addSubviewWithConstraints(view: UIView, top topConstant:CGFloat = 0, bottom bottomConstant: CGFloat = 0, left leftConstant: CGFloat = 0, right rightConstant: CGFloat = 0) {
+        
+        addOrBringToFront(view: view)
+        
+        let top = view.topAnchor.constraint(equalTo: topAnchor, constant: topConstant)
+        let bottom = view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstant)
+        let left = view.leftAnchor.constraint(equalTo: leftAnchor, constant: leftConstant)
+        let right = view.rightAnchor.constraint(equalTo: rightAnchor, constant: rightConstant)
+        activate(constraints: [top,bottom, left,right])
+    }
+    
+    func addSubviewAtCenter(view: UIView) {
+        addOrBringToFront(view: view)
+        
+        let centerX = view.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0)
+        let centerY = view.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0)
+        activate(constraints:[centerY,centerX])
+    }
+}
+
 
